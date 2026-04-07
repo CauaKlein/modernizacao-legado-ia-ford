@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  background: #f5f9fc;
+  color: #071224;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.conv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5%;
+  background: transparent;
+}
+.conv-brand {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #0b2b4a;
+}
+.conv-brand .conv-icon {
+  color: #2563eb;
+  margin-right: 8px;
+}
+.conv-nav a {
+  margin-left: 20px;
+  color: #334155;
+  text-decoration: none;
+}
+
+.conv-main {
+  max-width: 1150px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+.conv-title {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 8px;
+  font-weight: 800;
+}
+.conv-sub {
+  color: #475569;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.conv-card {
+  margin-top: 28px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 30px rgba(12, 23, 39, 0.06);
+}
+
+.conv-row {
+  display: flex;
+  gap: 28px;
+}
+.conv-col {
+  flex: 1;
+  min-width: 0;
+}
+.conv-left {
+  flex: 1.2;
+}
+.conv-right {
+  flex: 1;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+.conv-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e6eef8;
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 18px;
+}
+.conv-textarea {
+  width: 100%;
+  height: 360px;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #e6eef8;
+  resize: vertical;
+  background: #fbfdff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono",
+    monospace;
+  color: #0b2b4a;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.conv-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  align-items: center;
+}
+.conv-btn {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 0;
+  background: #6b8efb;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(59, 82, 200, 0.12);
+}
+.conv-btn:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+.conv-btn-secondary {
+  background: #eef3ff;
+  color: #274472;
+}
+
+.conv-msg {
+  margin-top: 12px;
+  color: #0b2b4a;
+  font-size: 14px;
+}
+
+.conv-info {
+  margin-top: 28px;
+  padding: 18px;
+  border-radius: 10px;
+  background: #eef6ff;
+  border: 1px solid #e2f0ff;
+}
+.conv-info h3 {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 900px) {
+  .conv-row {
+    flex-direction: column;
+  }
+  .conv-textarea {
+    height: 300px;
+  }
+  .conv-left {
+    order: 1;
+  }
+  .conv-right {
+    order: 2;
+  }
+}
+@media (max-width: 480px) {
+  .conv-title {
+    font-size: 22px;
+  }
+  .conv-textarea {
+    height: 220px;
+  }
+}

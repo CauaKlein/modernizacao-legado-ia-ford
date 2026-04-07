@@ -1,0 +1,45 @@
+Freshline AI
+
+O projeto Freshline AI é um protótipo desenvolvido para demonstrar a conversão e refatoração automática de código entre diferentes linguagens de programação.
+
+Descrição do projeto
+A aplicação tem uma interface web simples que permite colar um trecho de código, escolher a linguagem de origem e a linguagem desejada.
+O backend envia o código para a API do Gemini, que retorna o código convertido.
+Também existe um modo de teste local sem chamar a API.
+
+Estrutura do projeto
+Freshline AI/
+│
+├── server.js              # Servidor principal em Node.js (Express)
+├── .env                   # Configurações de ambiente (API key e porta)
+├── package.json           # Dependências e scripts npm
+│
+├── /pages/
+│   └── converter.html     # Página principal do projeto
+│
+└── /scripts/
+    └── converter.js       # Script que faz a comunicação com o servidor
+
+Como configurar
+1. Instalar o Node.js versão 18 ou superior.
+
+2. Instalar as dependências:
+npm install express axios dotenv cors
+
+3. Iniciar o servidor:
+npm start
+
+O servidor rodará em:
+http://localhost:3000
+
+
+Testes básicos
+Verificar se o servidor está ativo:
+Invoke-WebRequest http://localhost:3000/api/health | Select-Object -ExpandProperty Content
+
+Testar a conexão com o Gemini:
+Invoke-WebRequest http://localhost:3000/api/hf-test | Select-Object -ExpandProperty Content
+
+Se o teste retornar um JSON com ok: true, o projeto está funcionando corretamente.
+
+

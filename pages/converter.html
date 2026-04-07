@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Refatorar</title>
+    <link rel="stylesheet" href="../styles/converter.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" href="../images/logo pequena.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="../images/logo pequena.png" alt="" />
+        <span>Freshline AI</span>
+      </div>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a class="selected" href="#">Refatorar</a>
+        <a href="../pages/comofunciona.html">Como Funciona?</a>
+      </nav>
+    </header>
+
+    <main class="conv-main">
+      <h1 class="conv-title">Ferramenta de refatoração de código</h1>
+      <p class="conv-sub">
+        Transforme seu código legado em um código mais limpo e fácil de manter
+      </p>
+
+      <section class="conv-card">
+        <div class="conv-row">
+          <div class="conv-col conv-left">
+            <label for="conv-lang">Linguagem de Programação (origem)</label>
+            <select id="conv-lang" class="conv-select">
+              <option>JavaScript</option>
+              <option>TypeScript</option>
+              <option>Python</option>
+              <option>Java</option>
+              <option>C#</option>
+              <option>PHP</option>
+              <option>Ruby</option>
+              <option>Go</option>
+            </select>
+
+            <label for="conv-target">Linguagem Alvo (destino)</label>
+            <select id="conv-target" class="conv-select">
+              <option>Python</option>
+              <option>JavaScript</option>
+              <option>TypeScript</option>
+              <option>Java</option>
+              <option>C#</option>
+              <option>PHP</option>
+              <option>Ruby</option>
+              <option>Go</option>
+            </select>
+
+            <label for="conv-legacy">Código Legado</label>
+            <textarea
+              id="conv-legacy"
+              class="conv-textarea"
+              placeholder="Cole seu código legado aqui..."
+            ></textarea>
+          </div>
+
+          <div class="conv-col conv-right">
+            <label for="conv-refactored">Código Refatorado</label>
+            <textarea
+              id="conv-refactored"
+              class="conv-textarea"
+              placeholder="O código convertido aparecerá aqui..."
+              readonly
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="conv-actions">
+          <button id="conv-run" class="conv-btn">→ Refatorar Código</button>
+          <button id="conv-clear" class="conv-btn conv-btn-secondary">
+            Limpar
+          </button>
+        </div>
+
+        <div id="conv-msg" class="conv-msg" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p><b>Freshline AI</b></p>
+      <p>Transforme código legado em código moderno.</p>
+    </footer>
+
+    <script src="../scripts/converter.js"></script>
+  </body>
+</html>
